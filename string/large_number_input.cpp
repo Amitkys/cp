@@ -1,3 +1,4 @@
+// added 2(integer) in given number(as string)
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
