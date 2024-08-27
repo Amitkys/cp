@@ -1,20 +1,21 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 int main(){
-	// cout << "Hello World";
-	int x = 220;
-	int temp = x;
-	int ans = 0;
-	while(x){
-		int rem = x % 10;
-		if(rem == 0){
-			x = x / 10;
-			continue;
-		}
-		if(temp % rem == 0){
-			ans++;
-		}
-		x = x / 10;
+	int n;
+	cin >> n;
+	int arr[n];
+
+	for(int i = 0; i < n; i++){
+		cin >> arr[i];
 	}
-	cout << ans;
+	int sum =0;
+	for(int i = 0; i < n; i++){
+		cout << arr[i] << " ";
+		sum += arr[i];
+	}	
+
+	cout << endl;
+
+	cout << "sum of all element is " << sum << endl;
+	
 }
