@@ -1,15 +1,24 @@
 #include <iostream>
 using namespace std;
 int main(){
+    int a;
+    int b;
+    string c;
 
-	int i = 1;
+    cin >> a;
+    cin >> b;
+    cin >> c;
 
-	while(i <= 10){
-		if(i % 2 == 0){
-			cout << i << " ";
-		}
-		++i;
-	}
-	cout << endl;
-
+    if(c == "sum"){
+        cout << a+b;
+    }else if(c == "sub"){
+        cout << a-b;
+    }else if(c == "mul"){
+        cout << a * b;
+    }else if(c == "div"){
+        cout << a / b;
+    }else{
+        cout << "wrong input";
+    }
+    cout << endl;
 }
