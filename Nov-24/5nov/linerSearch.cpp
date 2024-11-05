@@ -4,5 +4,6 @@ function bool search(int arr, int n, int x){
 			return true;
 		}
 	}
+	
 	return false;
 }
