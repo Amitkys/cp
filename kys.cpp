@@ -1,36 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-
-int removeDuplicate(int arr[], int n) {
-	int j = 1;
-	int i = 0;
-
-	while(j < n) {
-		if(arr[i] != arr[j]){
-			i++;
-			arr[i] = arr[j];
-		}
-		j++;
+int getSquareRoot(int n) {
+	int result = 1;
+	while (result * result <= n){
+		result++;
 	}
-	return i+1;
-}
-
-void printArray(int arr[], int n) {
-	
-	cout << "printing array" << endl;
-	for(int i = 0; i < n; i++) {
-		cout << arr[i] << " ";
-	}
-	cout << "\n..........." << endl;
+	return result - 1;
 }
 int main() {
-	int n;
-	cin >> n;
-	int arr[n];
-	for(int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
-	int sizeOfArray = removeDuplicate(arr, n);
-	printArray(arr, sizeOfArray);
+	int result = getSquareRoot(16);
+	return 0;
 }
-
