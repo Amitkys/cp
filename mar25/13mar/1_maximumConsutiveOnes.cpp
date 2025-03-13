@@ -5,20 +5,19 @@
 using namespace std;
 
 int maxConsecutiveCount(vector<int> &arr) {
-    bool flag = false;
-    int count = 0;
-    int maxCount = 0;
+    int maxCount = 1, count = 1;
 
-    for(int i = 0; i < arr.size(); i++) {
-        if(arr[i] == 1) {
-           count++; 
-           maxCount = max(maxCount, count);
+    for(int i = 1; i < arr.size(); i++) {
+        if(arr[i] == arr[i-1]){
+            count++;
         }
         else{
-            count = 0;
+            maxCount = max(maxCount, count);
+            count = 1;
         }
     }
-    return maxCount;
+
+    return max(maxCount, count);
 }
 
 int main() {
